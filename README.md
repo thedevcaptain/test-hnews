@@ -10,7 +10,7 @@
   <a target="_blank" href="https://github.com/FrancescoCt/HackerNews"><img src="https://img.shields.io/github/last-commit/francescoct/hackernews?logo=github&color=609966&logoColor=fff" alt="Last commit"/></a>
 </p>
 <div align="center">
-  <img src="https://github.com/FrancescoCt/HackerNews/blob/main/src/img/HackerNews.png" alt="Light Theme" width="100%"/>
+  <img src="https://github.com/FrancescoCt/HackerNews/blob/master/src/img/HackerNews.png" alt="Light Theme" width="100%"/>
 </div>
 <br/><br/>
 
