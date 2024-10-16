@@ -40,7 +40,7 @@
 * If you want to see the previous results click the button "Previous"
 ## 💻 How to test it
 
-* Download the current repository and test it on localhost or try it online. Here is the [link](https://francescoct.github.io/projects/hackerNews/).
+* Download the current repository and test it on localhost or try it online. Here is the [link](https://francescoct.github.io/projects/hackerNews/dist/).
 
 ## 📒 Code notes
 <p>Reminder personali:</p>
