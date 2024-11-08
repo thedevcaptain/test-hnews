@@ -25,6 +25,9 @@ jobs:
       run: |
         mkdir dist
         echo "Cartella autogenerata tramite action" > dist/notes.txt
+    - name: Overwrite .gitignore
+      run: |
+        echo "node_modules/" > .gitignore
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -49,7 +52,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        git push https://x-access-token:${GH_TOKEN}@github.com/francescoct/hackernews.git HEAD:main
+        git push https://x-access-token:${GH_TOKEN}@github.com/francescoct/hackernews.git HEAD:master
 
     - name: Upload bundled files
       uses: actions/upload-artifact@v4
