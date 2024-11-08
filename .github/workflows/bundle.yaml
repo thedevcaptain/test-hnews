@@ -40,7 +40,6 @@ jobs:
         git add .
         git commit -m "Add dist folder with files"
         git push
-      uses: ./
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
