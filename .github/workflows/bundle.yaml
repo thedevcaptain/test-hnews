@@ -40,7 +40,7 @@ jobs:
 
     - name: Git status
       run: |
-        echo git status
+        git status
 
     - name: Commit and push changes
       run: |
