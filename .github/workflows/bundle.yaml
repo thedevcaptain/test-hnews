@@ -54,6 +54,22 @@ jobs:
       run: |
         git push https://x-access-token:${GH_TOKEN}@github.com/francescoct/hackernews.git HEAD:master
 
+    - name: Ripristino .gitignore
+      run: |
+        echo "node_modules/" > .gitignore
+        echo "dist/" >> .gitignore
+
+    - name: Commit final changes
+      run: |
+        git add .
+        git commit -m "Commit automatico da GitHub Actions"
+
+    - name: Push final changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        git push https://x-access-token:${GH_TOKEN}@github.com/francescoct/hackernews.git HEAD:master
+
     - name: Upload bundled files
       uses: actions/upload-artifact@v4
       with:
