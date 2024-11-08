@@ -40,7 +40,7 @@ jobs:
         git add .
         git commit -m "Add dist folder with files"
         git push
-      with:
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload bundled files
