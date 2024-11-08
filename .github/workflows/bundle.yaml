@@ -23,8 +23,10 @@ jobs:
 
     - name: Create dist folder and add files
       run: |
+        if [ ! -d "dist" ]; then 
         mkdir dist
         echo "Cartella autogenerata tramite action" > dist/notes.txt
+        fi
     - name: Overwrite .gitignore
       run: |
         echo "node_modules/" > .gitignore
