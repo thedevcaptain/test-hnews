@@ -10,6 +10,9 @@ on:
       - main
       - master
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,6 +37,10 @@ jobs:
     - name: Bundle JavaScript
       run: |
         npx webpack --config webpack.config.js
+
+    - name: Git status
+      run: |
+        echo git status
 
     - name: Commit and push changes
       run: |
