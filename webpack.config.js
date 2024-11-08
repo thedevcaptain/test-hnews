@@ -1,5 +1,6 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     //Definisco il file js di output (script.js) grazie alla variabile [name.js]
@@ -25,6 +26,11 @@ module.exports = {
             path: './.env',
             safe: true, // load '../../path/to/other.env.example'
             defaults: true, // load '../../path/to/other.env.defaults'
+          }),
+          new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html',
+            inject: 'body', // Assicura che lo script venga inserito prima della chiusura del tag body
           })
     ]
 }
