@@ -32,7 +32,7 @@ jobs:
         path: dist/*
         name: github-pages
     - name: CLI
-      run: ls && ls dist
+      run: chmod -R a+rX dist/
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
