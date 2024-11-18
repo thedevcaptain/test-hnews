@@ -35,5 +35,3 @@ jobs:
       run: git config --global user.name "GithubBot"
     - name: Bundle JavaScript
       run: npx webpack --config webpack.config.js
-    - name: Upload bundled files
-      run: npm run deploy
