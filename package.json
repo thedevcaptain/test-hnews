@@ -2,9 +2,11 @@
   "name": "hackernews1",
   "version": "1.0.0",
   "description": "Hacker News",
+  "homepage": "http://thedevcaptain.github.io/test-hnews",
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
