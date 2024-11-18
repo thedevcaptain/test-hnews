@@ -22,16 +22,16 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '14'
     - name: Install dependencies
       run: npm install
-    - name: Setup Account email
-      run: git config --global user.email "gitub-bot[bot]@github.com"
-    - name: Setup Account name
-      run: git config --global user.name "GithubBot"
     - name: Bundle JavaScript
       run: npx webpack --config webpack.config.js
+    - name: Upload bundled files
+      uses: actions/upload-artifact@v4
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
