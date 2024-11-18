@@ -29,8 +29,10 @@ jobs:
         node-version: '14'
     - name: Install dependencies
       run: npm install
-    - name: Setup Account
+    - name: Setup Account email
       run: git config --global user.email "gitub-bot[bot]@github.com"
+    - name: Setup Account name
+      run: git config --global user.name "GithubBot"
     - name: Bundle JavaScript
       run: npx webpack --config webpack.config.js
     - name: Upload bundled files
