@@ -27,9 +27,9 @@ jobs:
     - name: Bundle JavaScript
       run: npx webpack --config webpack.config.js
     - name: Upload bundled files
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-artifact@v3
       with: 
-        path: dist
+        path: dist/*
         name: github-pages
     - name: Deploy to GitHub Pages
       id: deployment
