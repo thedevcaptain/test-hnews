@@ -26,6 +26,8 @@ jobs:
       run: npm install
     - name: Bundle JavaScript
       run: npx webpack --config webpack.config.js
+    - name: Remove symlinks
+      run: find dist -type l -delete
     - name: Upload bundled files
       uses: actions/upload-artifact@v4
       with: 
