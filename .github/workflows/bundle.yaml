@@ -26,12 +26,10 @@ jobs:
       run: npm install
     - name: Bundle JavaScript
       run: npx webpack --config webpack.config.js
-    - name: Remove symlinks
-      run: find dist -type l -delete
     - name: Upload bundled files
       uses: actions/upload-pages-artifact@v1
       with: 
-        path: dist/*
+        path: dist
         name: github-pages
     - name: Deploy to GitHub Pages
       id: deployment
